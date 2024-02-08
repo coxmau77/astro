@@ -1,0 +1,23 @@
+---
+const {
+  product: { id, title, price, description, image, rating },
+} = Astro.props;
+---
+
+<article
+  class="mx-auto px-4 py-6 bg-slate-100 max-w-sm flex flex-col gap-2 rounded-xl shadow-md"
+>
+  <img class="rounded" src={image} alt="logo astro" />
+  <h2 class="text-2xl font-bold text-gray-700">
+    {title.slice(0, 25) + "/..."}
+  </h2>
+  <p><i>Price: ${price}</i></p>
+
+  <p>{description.slice(0, 60)}/...</p>
+
+  <p class="text-orange-500">
+    User id: {id} | Raiting: {rating.rate} | Count: {rating.count}
+  </p>
+
+  
+</article>

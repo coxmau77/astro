@@ -1,0 +1,24 @@
+---
+    // const {title, description} = Astro.props;
+    // const { post } = Astro.props;
+    const { post: {title, body} } = Astro.props;
+---
+<!-- </astro script> -->
+
+<!-- <Codigo html> -->
+<article class="mx-auto px-4 py-6 bg-slate-100 max-w-sm flex flex-col gap-2 rounded-xl shadow-md">
+    <img class="rounded bg-slate-600" src="https://astro.js.org/astro.png" alt="logo astro">
+    <h2 class="text-2xl font-bold text-gray-700">{title}</h2>
+    <p><i>{body}</i></p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius enim nobis sint, earum ad odio magnam voluptatum pariatur rerum esse.</p>
+    <or class=" text-orange-500">07/01/2024 - 18 min read</p>
+</article>
+<!-- </Codigo html> -->
+
+<!-- <Style css> -->
+<style>
+    article {
+        color: grey;
+    }
+</style>
+<!-- </Style css> -->
