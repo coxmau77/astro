@@ -84,3 +84,8 @@ main {
     background-size: 400%;
     background-position: 0%;
 }
+
+.link-style {
+    color: #ffffff;
+    padding: 2px;
+}
