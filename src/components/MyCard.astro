@@ -1,0 +1,34 @@
+---
+// import type { string } from "astro:schema";
+
+interface Props {
+  titleCard: string;
+  bodyCard: string;
+  href: string;
+  categoryCard: string;
+  imgProfileCard: string;
+}
+
+const { href, titleCard, bodyCard, categoryCard, imgProfileCard } = Astro.props;
+---
+
+<li
+  class="max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-800"
+>
+  <a href={href}>
+    <div class="flex items-center p-4">
+      <img
+        class="w-10 h-10 rounded-full mr-4 dark:bg-gray-900"
+        src={imgProfileCard}
+        alt="Avatar default img"
+      />
+      <div class="text-sm">
+        <!-- Clases para texto que cambia en modo oscuro -->
+        <p class="text-gray-600 dark:text-gray-300 leading-none">
+          {categoryCard}
+        </p>
+        <p class="text-gray-600 dark:text-gray-300">{titleCard}</p>
+      </div>
+    </div>
+  </a>
+</li>
