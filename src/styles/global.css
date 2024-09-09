@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definir estilos predeterminados para botones */
+@layer base {
+    button {
+        @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow;
+    }
+}
+
+:root {
+
+    --main-clr: tomato;
+
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
+
+    --primary: #1DA1F2;
+    /* Color principal*/
+    --secondary: #14171A;
+    /* Color secundario*/
+
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+}
+
+body {
+    h1 {
+        font-size: 4em;
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 1em;
+        min-width: 100%;
+    }
+
+    h3 {
+        font-weight: 600;
+    }
+
+    button {
+        background-color: var(--primary);
+        padding: .4rem .8rem;
+        border-radius: 100vw;
+        font-size: medium;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+
+main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: rgb(253, 218, 218);
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.astro-a {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 220px;
+    height: auto;
+    z-index: -1;
+}
+
+.text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+}
