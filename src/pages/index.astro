@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import PersonalCard from "../components/PersonalCard.astro";
 import Header from "../components/Header.astro";
+import UserCard from "../components/UserCard";
 ---
 
 <Layout title="Bienvenid@ a mi primer sitio con Astro.">
@@ -12,6 +13,7 @@ import Header from "../components/Header.astro";
     brandName="Nombre marca"
     iconBrand="./img/brand-icon.svg"
   />
+
   <main>
     <svg
       class="astro-a"
@@ -42,6 +44,35 @@ import Header from "../components/Header.astro";
       </defs>
     </svg>
     <h1>Bienvenido a <span class="text-gradient">Astro Mau :)!</span></h1>
+
+    <div class="flex flex-wrap gap-4 bg-black/10 p-4 rounded-lg my-4">
+      <UserCard
+        src="./img/react.svg"
+        title="Título de User Card 1"
+        content="Componente creado con React"
+      />
+      <UserCard
+        src="./img/react.svg"
+        title="Título de User Card 1"
+        content="Componente creado con React"
+      />
+      <UserCard
+        src="./img/react.svg"
+        title="Título de User Card 1"
+        content="Componente creado con React"
+      />
+      <UserCard
+        src="./img/react.svg"
+        title="Título de User Card 1"
+        content="Componente creado con React"
+      />
+      <UserCard
+        src="./img/react.svg"
+        title="Título de User Card 2"
+        content="Componente creado con React"
+      />
+    </div>
+
     <button>Button default</button>
     <button
       onclick="toggleDarkMode()"
@@ -59,7 +90,7 @@ import Header from "../components/Header.astro";
     </p>
     <button>Contacto button</button>
 
-    <ul role="list" class="gap-4">
+    <ul role="list" class="gap-4 w-full">
       <PersonalCard
         userNameCard="Mauricio Cox"
         bodyCard="Instructor y estudiante Fullstack developer"
@@ -86,6 +117,8 @@ import Header from "../components/Header.astro";
       />
     </ul>
   </main>
+
   <nav></nav>
+
   <footer></footer>
 </Layout>
